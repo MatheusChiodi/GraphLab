@@ -6,7 +6,7 @@ function NavBar({ setPage, page }) {
   return (
     <div className="flex flex-col items-center h-screen bg-gray-100 md:w-[220px] w-[60px] rounded-r-2xl shadow-2xl py-4 transition-all duration-500">
       <motion.div
-        className="flex items-center gap-3 cursor-pointer"
+        className="flex items-center cursor-pointer"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{
           opacity: 1,
@@ -16,7 +16,7 @@ function NavBar({ setPage, page }) {
         onClick={() => setPage('Home')}
       >
         <img src="logo.png" alt="logo" className="w-[40px] h-[40px]" />
-        <h1 className="text-2xl font-bold md:block hidden">MChiodi</h1>
+        <h1 className="text-2xl font-bold md:block hidden me-2">MChiodi</h1>
       </motion.div>
       <div className="flex flex-col gap-4 mt-4 w-full px-3 pt-4 border-t-1 border-gray-300">
         <motion.div
@@ -100,7 +100,7 @@ function NavBar({ setPage, page }) {
             transition: { duration: 1.8, ease: 'easeOut' },
           }}
         >
-          <ButtonHeader name={'Cores'} icon={'Brush'} page={'Config'} function={setPage}/>
+          <ButtonHeader name={'Cores'} icon={'Brush'} page={'Color'} function={setPage}/>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -20 }}

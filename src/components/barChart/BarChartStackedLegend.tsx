@@ -21,12 +21,12 @@ import {
 import { useChartData } from '@/ChartDataContext';
 
 export function BarChartStackedLegend() {
-  const { chartData, chartConfig } = useChartData();
+  const { chartData, chartConfig, color } = useChartData();
   return (
     <Card className="bg-gray-100 shadow-lg border-gray-200 lg:w-[30%] md:w-[40%] w-full mx-auto">
       <CardHeader>
         <CardTitle>Bar Chart - Stacked + Legend</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription></CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -44,13 +44,13 @@ export function BarChartStackedLegend() {
             <Bar
               dataKey="desktop"
               stackId="a"
-              fill="var(--color-desktop)"
+              fill={color}
               radius={[0, 0, 4, 4]}
             />
             <Bar
               dataKey="mobile"
               stackId="a"
-              fill="var(--color-mobile)"
+              fill={color}
               radius={[4, 4, 0, 0]}
             />
           </BarChart>
@@ -58,11 +58,9 @@ export function BarChartStackedLegend() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Dados de teste <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
+        <div className="leading-none text-muted-foreground">Teste de Dados</div>
       </CardFooter>
     </Card>
   );

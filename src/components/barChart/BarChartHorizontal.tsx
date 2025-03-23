@@ -18,14 +18,13 @@ import {
   ChartTooltipContent,
 } from '@/components/ui/chart';
 
-
 export function BarChartHorizontal() {
-  const { chartData, chartConfig } = useChartData();
+  const { chartData, chartConfig, color } = useChartData();
   return (
     <Card className="bg-gray-100 shadow-lg border-gray-200 lg:w-[30%] md:w-[40%] w-full mx-auto">
       <CardHeader>
         <CardTitle>Bar Chart - Horizontal</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription></CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -50,17 +49,15 @@ export function BarChartHorizontal() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={5} />
+            <Bar dataKey="desktop" fill={color} radius={5} />
           </BarChart>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Dados de teste <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
+        <div className="leading-none text-muted-foreground">Teste de Dados</div>
       </CardFooter>
     </Card>
   );

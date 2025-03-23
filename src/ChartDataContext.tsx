@@ -51,10 +51,11 @@ const ChartDataContext = createContext();
 export const ChartDataProvider = ({ children }) => {
   const [chartData, setChartData] = useState(initialChartData);
   const [chartConfig, setChartConfig] = useState(initialChartConfig);
+  const [color, setColor] = useState('#ff5555');
 
   return (
     <ChartDataContext.Provider
-      value={{ chartData, setChartData, chartConfig, setChartConfig }}
+      value={{ chartData, setChartData, chartConfig, setChartConfig, color, setColor }}
     >
       {children}
     </ChartDataContext.Provider>

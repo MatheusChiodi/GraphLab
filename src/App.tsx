@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import GrapghColumn from './pages/GraphColumn';
 import Data from './pages/Data';
+import Color from './pages/Color';
 import { ChartDataProvider } from './ChartDataContext';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         {page == 'Home' && <Home />}
         {page == 'GraphColumn' && <GrapghColumn />}
         {page == 'Data' && <Data />}
+        {page == 'Color' && <Color />}
       </div>
     </ChartDataProvider>
   );

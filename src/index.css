@@ -36,6 +36,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --color-desktop: #6366f1 !important; /* Exemplo: roxo */
 }
 
 .dark {
@@ -110,6 +111,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+:root {
+  .fill-foreground {
+    fill: var(--color-gray-900);
+  }
+}
+
 @layer base {
   :root {
     --chart-1: 12 76% 61%;
@@ -128,6 +135,10 @@
   }
 }
 
-div, button, p, h1, a {
+div,
+button,
+p,
+h1,
+a {
   transition: all 0.5s !important;
 }
